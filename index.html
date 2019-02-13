@@ -8,13 +8,13 @@
     <p><h1>This site is under construction</h1>Wait to see the resume</p>
   </div>
   <div id="pdf"></div>
+  <footer style="text-align: center; font-size: 12px;">All Rights Reserved.</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.js"></script>
   <script>
     window.addEventListener('load', function() {
       var messageHandle = document.getElementById('message')
       var options = {
-        height: "2500px",
-        pdfOpenParams: { view: 'FitH'}
+        height: "2380px"
       };
       setTimeout(function () {
         PDFObject.embed(`Shivam-resume.pdf`,"#pdf", options)
