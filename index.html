@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shivam Khanna</title>
+</head>
+<body>
+  <div id="message" style=" padding: 200px 0; text-align: center; width:100%; vertical-align: middle;">
+    <p><h1>This site is under construction</h1>Wait to see the resume</p>
+  </div>
+  <div id="pdf"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      var messageHandle = document.getElementById('message')
+      var options = {
+        height: "2500px",
+        pdfOpenParams: { view: 'FitH'}
+      };
+      setTimeout(function () {
+        PDFObject.embed(`Shivam-resume.pdf`,"#pdf", options)
+        messageHandle.style.display = "none"
+      }, 5000)
+    })
+  </script>
+</body>
+</html>
